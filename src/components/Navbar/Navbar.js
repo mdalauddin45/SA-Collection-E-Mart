@@ -48,10 +48,11 @@ const Navbar = () => {
                 <i className="fa fa-sign-in me-1" aria-hidden="true"></i> Login
               </a>
               <a href="/" className="btn btn-outline-dark">
-                <i class="fa fa-user-plus me-1" aria-hidden="true"></i> Register
+                <i className="fa fa-user-plus me-1" aria-hidden="true"></i>{" "}
+                Register
               </a>
               <a href="/" className="btn btn-outline-dark">
-                <i class="fa fa-shopping-cart me-1" aria-hidden="true"></i>
+                <i className="fa fa-shopping-cart me-1" aria-hidden="true"></i>
                 Cart (0)
               </a>
             </div>
