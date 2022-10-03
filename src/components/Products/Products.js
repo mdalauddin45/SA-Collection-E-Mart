@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import Skeleton from "react-loading-skeleton";
 import Cart from "../Cart/Cart";
 import "./Products.css";
 const Products = () => {
@@ -28,8 +29,8 @@ const Products = () => {
   const Loading = () => {
     return (
       <>
-        <div className="spinner-border text-danger" role="status">
-          <span className="visually-hidden">Loading...</span>
+        <div className="col-md-3">
+          <Skeleton></Skeleton>
         </div>
       </>
     );
