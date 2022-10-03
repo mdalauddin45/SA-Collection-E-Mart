@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cart.css";
 const Cart = ({ product }) => {
-  console.log(product);
+  // console.log(product);
   const { image, title, price } = product;
   return (
     <div className="col-md-3 mb-4">

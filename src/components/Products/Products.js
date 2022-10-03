@@ -30,23 +30,59 @@ const Products = () => {
     return (
       <>
         <div className="col-md-3">
-          <Skeleton></Skeleton>
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
         </div>
       </>
     );
+  };
+  const filterProduct = (e) => {
+    const updateList = data.filter((item) => item.category === e);
+    setFilter(updateList);
   };
 
   const ShowProducts = () => {
     return (
       <>
         <div className="buttons text-center mb-5 pb-5">
-          <button className="btn btn-outline-dark">All</button>
-          <button className="btn btn-outline-dark ms-2">Men's Clothing</button>
-          <button className="btn btn-outline-dark ms-2">
+          <button
+            onClick={() => setFilter(data)}
+            className="btn btn-outline-dark"
+          >
+            All
+          </button>
+          <button
+            onClick={() => filterProduct("men's clothing")}
+            className="btn btn-outline-dark ms-2"
+          >
+            Men's Clothing
+          </button>
+          <button
+            onClick={() => filterProduct("women's clothing")}
+            className="btn btn-outline-dark ms-2"
+          >
             Women's Clothing
           </button>
-          <button className="btn btn-outline-dark ms-2">Jewelry</button>
-          <button className="btn btn-outline-dark ms-2">Electronic</button>
+          <button
+            onClick={() => filterProduct("jewelery")}
+            className="btn btn-outline-dark ms-2"
+          >
+            Jewelery
+          </button>
+          <button
+            onClick={() => filterProduct("electronics")}
+            className="btn btn-outline-dark ms-2"
+          >
+            Electronic
+          </button>
         </div>
         {filter.map((product) => (
           <Cart product={product} key={product.id}></Cart>
